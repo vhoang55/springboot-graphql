@@ -1,0 +1,25 @@
+
+query mySongs {
+    songs {
+        id
+        title
+    }
+}
+
+mutation deleteSong {
+    deleteSong(id: 1)
+}
+
+query GetSong($id: ID!) {
+    song(id: $id) {
+        id
+        title
+    }
+}
+
+mutation Addsongs {
+    createSong(createSongInput: { title: "Hello" }) {
+        id
+        title
+    }
+}

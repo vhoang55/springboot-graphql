@@ -1,0 +1,31 @@
+type Query{
+    songs: [Song!]!
+    song(id: ID!): Song!
+}
+
+type Mutation {
+    createSong(createSongInput: CreateSongInput!): Song!
+    updateSong(id: ID!, updateSongInput: UpdateSongInput!): Song!
+    deleteSong(id: ID!): Boolean
+}
+
+type Employee {
+    id: Int!
+    name: String!
+    department: String!
+    designation: String!
+    email: String!
+}
+
+type Song {
+    id: ID!
+    title: String
+}
+input CreateSongInput {
+    title: String!
+}
+
+input UpdateSongInput {
+    title: String
+}
+
